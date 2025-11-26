@@ -23,6 +23,7 @@ A modern React application that allows users to search for movies using the OMDb
 
 ## 📂 Project Structure
 
+```
 movies_searching_app-React/
 ├── public/                  # Static assets
 ├── src/
@@ -35,6 +36,7 @@ movies_searching_app-React/
 │   └── searchMovies.jsx     # Search component
 ├── package.json             # Dependencies
 └── README.md                # Documentation## 🚀 How to Run Locally
+```
 
 1. **Clone the repository**
     git clone https://github.com/your-username/movie-search-app.git
@@ -45,4 +47,8 @@ movies_searching_app-React/
         The app will open at `http://localhost:3000`.
 
 ---
-_Built with ❤️ by [Your Name]_
+_Built by_
+
+Twitter(X) : [@samuadda](https://x.com/samuadda)
+
+LinkedIn: [Saddiq Musa](https://www.linkedin.com/in/saddiq-daut/)
