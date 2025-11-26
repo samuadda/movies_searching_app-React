@@ -75,6 +75,17 @@
   transform: translateY(0);
 }
 
+.search-error {
+  color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 68, 68, 0.2);
+  text-align: center;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-out;
+}
+
 /* Favorites List */
 .favourites-container {
   width: 100%;
