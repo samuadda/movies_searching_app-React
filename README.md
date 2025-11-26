@@ -20,6 +20,26 @@ _(Note: Replace this with an actual screenshot of your app)_
 -   **OMDb API**: External data fetching for movie information.
 -   **JavaScript (ES6+)**: Async/Await, Array methods (`map`, `filter`).
 
+## 📂 Project Structure
+
+```text
+movies_searching_app-React/
+├── public/                  # Static assets (index.html, icons, etc.)
+├── src/
+│   ├── App.css              # Styling for the main App component
+│   ├── App.js               # Main application component and state holder
+│   ├── App.test.js          # Unit tests
+│   ├── FavouriteList.jsx    # Component to display the list of favorite movies
+│   ├── FavouriteMovie.jsx   # Component for individual movie items in the favorite list
+│   ├── index.css            # Global application styles
+│   ├── index.js             # Application entry point
+│   ├── searchMovies.jsx     # Component for searching movies via API
+│   ├── setupTests.js        # Test setup configuration
+│   └── reportWebVitals.js   # Performance measuring
+├── package.json             # Dependencies and scripts
+└── README.md                # Project documentation
+```
+
 ## 🚀 How to Run Locally
 
 1. **Clone the repository**
