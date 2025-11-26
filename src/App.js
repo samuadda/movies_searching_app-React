@@ -4,27 +4,48 @@ import { useState } from 'react';
 import FavouriteList from "./FavouriteList";
 
 function App() {
-  const [favourites, setfavourites] = useState([])
-  const [isModelOpen, setIsModelOpen] = useState(false)
-  const [selectedMOvie, setDelectedMovie] = useState(null)
+  const [favourites, setFavourites] = useState([])
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedMovie, setSelectedMovie] = useState(null)
+  
   const addFavourite = movie => {
-      setfavourites([...favourites, movie]);
+      setFavourites([...favourites, movie]);
   };
-  console.log(favourites)
   
   const removeFavourite = movie => {
-    setfavourites(favourites.filter(f => f.imdbID !== movie.imdbID))
+    setFavourites(favourites.filter(f => f.imdbID !== movie.imdbID))
   }
 
-  const showModel = movie => {
-    setDelectedMovie(movie)
-    setIsModelOpen(true)
+  const showModal = movie => {
+    setSelectedMovie(movie)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedMovie(null)
   }
 
   return (
       <div className="App">
           <SearchMovies addFavourite={addFavourite} />
-          <FavouriteList favourites={favourites} removeFavourite={removeFavourite} showModel={showModel}/>
+          <FavouriteList favourites={favourites} removeFavourite={removeFavourite} showModel={showModal}/>
+          
+          {isModalOpen && selectedMovie && (
+            <div className="modal-overlay" onClick={closeModal}>
+                <div className="modal-content" onClick={e => e.stopPropagation()}>
+                    <button className="modal-close" onClick={closeModal}>&times;</button>
+                    <img 
+                      className="modal-poster" 
+                      src={selectedMovie.Poster !== "N/A" ? selectedMovie.Poster : "https://via.placeholder.com/300x450?text=No+Poster"} 
+                      alt={selectedMovie.Title} 
+                    />
+                    <h2 className="modal-title">{selectedMovie.Title}</h2>
+                    <p className="modal-meta">Year: {selectedMovie.Year}</p>
+                    <p className="modal-meta">Type: {selectedMovie.Type}</p>
+                </div>
+            </div>
+          )}
       </div>
   );
 }

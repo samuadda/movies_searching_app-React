@@ -1,57 +1,84 @@
-# Movie Searching App 🎬
+# 🎬 Movie Search & Collections App
 
-A React-based application that allows users to search for movies using the [OMDb API](https://www.omdbapi.com/), add them to their favorite list, and manage their favorite movies.
+A modern React application that allows users to search for movies using the OMDb API, view details, and curate a personal list of favorites. This project represents a key milestone in my frontend development journey, demonstrating mastery of React state management, API integration, and modern CSS styling.
 
-## Features
-- **Search Movies**: Enter a movie title to search for movies using the OMDb API.
-- **Add to Favorites**: Save your favorite movies for easy access.
-- **Manage Favorites**: View your favorite movies list and remove movies you no longer want.
-- **Simple Modal System**: Display detailed information about a selected movie (feature in progress).
+![App Screenshot Placeholder](./public/screenshot-main.png)
+_(Note: Replace this with an actual screenshot of your app)_
 
-## Getting Started
+## ✨ Features
 
-### Prerequisites
-Make sure you have the following installed:
-- [Node.js](https://nodejs.org/) (v14+ recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js) or [yarn](https://yarnpkg.com/)
+-   **Search Movies**: Real-time searching using the OMDb API.
+-   **Favorites List**: Add and remove movies from your personal collection.
+-   **Movie Details**: Click on any movie to view more details in a modal.
+-   **Responsive Design**: Fully responsive grid layout that works on desktop and mobile.
+-   **Modern UI**: Dark theme, glassmorphism effects, and smooth animations.
 
-### Installation
-1. Clone the repository:
- ```bash
-git clone https://github.com/yourusername/movie-searching-app.git
-cd movie-searching-app
-```   
-2. Install dependencies (even if you don't currently have any, this is a good practice):
-```bash
-npm install
+## 🛠️ Tech Stack
 
-```
-## Usage
+-   **React.js**: Functional components and Hooks (`useState`, `useEffect`).
+-   **CSS3**: Custom properties (variables), Flexbox, Grid, and Animations.
+-   **OMDb API**: External data fetching for movie information.
+-   **JavaScript (ES6+)**: Async/Await, Array methods (`map`, `filter`).
 
-1. Start the development server:
-```bash
-Copy code
-```
-2. Use the search bar to look up movies and manage your favorites.
+## 🚀 How to Run Locally
 
+1. **Clone the repository**
 
-# API Key Setup
-This app uses the OMDb API for movie data, replea the text "YOUR_API_KEY" in this [file](https://github.com/samuadda/movies_searching_app-React/blob/main/src/searchMovies.jsx) with your api key from [OMDb](https://www.omdbapi.com/)
+    ```bash
+    git clone https://github.com/your-username/movie-search-app.git
+    ```
 
-## Technologies Used
-- React
-- OMDb API
+2. **Install Dependencies**
 
-## Future Enhancements
-- Add a modal to display detailed movie information.
-- Improve UI/UX with a design framework like Tailwind CSS or Material UI.
-- Enable local storage to persist favorite movies across sessions.
+    ```bash
+    npm install
+    ```
 
-## License
-This project is licensed under the [MIT License](https://opensource.org/license/mit). See the LICENSE file for details.
+3. **Start the App**
+    ```bash
+    npm start
+    ```
+    The app will open at `http://localhost:3000`.
 
-## Acknowledgments
-- [OMDb](https://www.omdbapi.com/) API for movie data.
-- React for the amazing ecosystem.
+## 📚 What I Learned
 
+Building this project helped solidify several core frontend concepts:
 
+### 1. React State Management
+
+-   Learned how to lift state up to the parent `App` component to share data between `SearchMovies` and `FavouriteList`.
+-   Managed complex state for the Modal visibility and the selected movie data.
+
+### 2. API Integration
+
+-   Mastered `fetch` and `async/await` to handle asynchronous data from the OMDb API.
+-   Implemented error handling to manage cases where movies aren't found or the network fails.
+
+### 3. Modern CSS & UI/UX
+
+-   Moved beyond basic styling to use **CSS Grid** for responsive layouts.
+-   Implemented **CSS Variables** for consistent theming.
+-   Added polish with **transitions**, **animations** (fade-ins), and **backdrop-filters** for a professional look.
+
+### 4. Component Architecture
+
+-   Practiced breaking down the UI into reusable components (`FavouriteMovie`, `SearchMovies`, `FavouriteList`).
+-   Learned the importance of clean prop drilling and event handling.
+
+## 📸 Screenshots
+
+### Search Interface
+
+![Search Interface](./public/screenshot-search.png)
+
+### Favorites Grid
+
+![Favorites Grid](./public/screenshot-grid.png)
+
+### Movie Details Modal
+
+![Movie Details](./public/screenshot-modal.png)
+
+---
+
+_Built with ❤️ by [Your Name]_

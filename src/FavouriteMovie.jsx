@@ -1,4 +1,4 @@
-function FavouriteMovie({ movie, removeFavourite }) {
+function FavouriteMovie({ movie, removeFavourite, showModel }) {
 
     const handleRemove = e => {
         e.stopPropagation()
@@ -9,16 +9,18 @@ function FavouriteMovie({ movie, removeFavourite }) {
         showModel(movie)
     }
     return (
-        <>
-            <li onClick={handleShowModel}>
-                <img src={movie.Poster} alt={movie.Title} />
-                <div>
-                    <h4>{movie.Title}</h4>
-                    <p>{movie.Year}</p>
-                </div>
-                <button onClick={handleRemove}>Remove Movie</button>
-            </li>
-        </>
+        <li className="movie-card" onClick={handleShowModel}>
+            <img 
+                className="movie-poster" 
+                src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=No+Poster"} 
+                alt={movie.Title} 
+            />
+            <div className="movie-info">
+                <h4 className="movie-title">{movie.Title}</h4>
+                <p className="movie-year">{movie.Year}</p>
+            </div>
+            <button className="remove-btn" onClick={handleRemove}>Remove</button>
+        </li>
     );
 }
 

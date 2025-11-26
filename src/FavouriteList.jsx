@@ -3,18 +3,18 @@ import FavouriteMovie from "./FavouriteMovie";
 
 function FavouriteList({ favourites, removeFavourite, showModel }) {
     return (
-        <>
-            <h3>My favorite movies</h3>
+        <div className="favourites-container">
+            <h3 className="favourites-title">My Favorite Movies</h3>
             {favourites.length > 0 ? (
-                <ul>
+                <ul className="movie-grid">
                     {favourites.map(movie => (
                         <FavouriteMovie key={movie.imdbID} movie={movie} removeFavourite={removeFavourite} showModel={showModel} />
                     ))}
                 </ul>
             ) : (
-                <p>you have no movies.</p>
+                <p className="no-movies">You have no favorite movies yet.</p>
             )}
-        </>
+        </div>
     );
 }
 
