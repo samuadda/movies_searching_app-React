@@ -1,3 +1,5 @@
+> **Project type: Learning / practice.** This repository documents an earlier stage of my development journey and is kept as a learning reference and portfolio exercise.
+
 # 🎬 Movie Search & Collections App
 
 A modern React application that allows users to search for movies using the OMDb API, view details, and curate a personal list of favorites. This project represents a key milestone in my frontend development journey, demonstrating mastery of React state management, API integration, and modern CSS styling.
